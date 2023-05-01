@@ -62,15 +62,8 @@ settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrott
            if ContaminatedPlayers > 0 then
                Result = Result:sub(1, -3)
            end
-
-           InvokeCore("ChatMakeSystemMessage", {
-   ["Text"] = (ContaminatedPlayers > 0) and string.format(ThereArHoggers, ContaminatedPlayers, Result) or ThereNoHoggers
-           })
            
            Player.ReplicationFocus = workspace
-           InvokeCore("ChatMakeSystemMessage", {
-   ["Text"] = UHaveOwnership
-           })
            
 while RS.Stepped:Wait() do
 for _, Other in pairs(Players:GetChildren()) do
